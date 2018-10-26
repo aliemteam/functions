@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "deploy": "gcloud functions deploy slack_msg --runtime nodejs8 --trigger-http",
+    "dev": "functions deploy slack_msg --trigger-http"
   },
   "dependencies": {
     "@slack/client": "^4.8.0",
